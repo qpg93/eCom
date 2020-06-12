@@ -6,16 +6,23 @@ from .forms import contactForm
 
 # Create your views here.
 def contact(request):
+
+    title = 'Contact'
     form = contactForm(request.POST or None)
+    context = {'title': title, 'form': form}
+
     if form.is_valid():
         name = form.cleaned_data['name']
         comment = form.cleaned_data['comment']
         subject = 'Message from QPG93 PythonAnywhere.com'
         emailFrom = form.cleaned_data['email']
         emailTo = [settings.EMAIL_HOST_USER]
-        message = '%s\n%s\n%s' % (comment, emailFrom, name)
+        message = '%s\n\n%s\n\n%s' % (comment, emailFrom, name)
         send_mail(subject, message, emailFrom, emailTo, fail_silently=False)
+        title = 'Thanks!'
+        confirm_message = 'Thanks for the message. We will get right back to you.'
+        context = {'title': title, 'confirm_message': confirm_message}
 
-    context = locals()
     template = 'contact.html'
+
     return render(request, template, context)

@@ -15,21 +15,21 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# # Gmail
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'pengqing2012@gmail.com'
-# EMAIL_HOST_PASSWORD = 'XiaoFeng-GuLong'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-
-# Outlook
+# Gmail
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp-mail.outlook.com'
-EMAIL_HOST_USER = 'qing.peng@outlook.fr'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'pengqing2012@gmail.com'
 EMAIL_HOST_PASSWORD = 'XiaoFeng-GuLong'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+# # Outlook
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp-mail.outlook.com'
+# EMAIL_HOST_USER = 'qing.peng@outlook.fr'
+# EMAIL_HOST_PASSWORD = 'XiaoFeng-GuLong'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
